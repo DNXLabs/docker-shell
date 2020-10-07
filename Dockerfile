@@ -41,7 +41,3 @@ COPY scripts /opt/scripts
 ENV PATH "$PATH:/opt/scripts"
 
 WORKDIR /work
-
-ENTRYPOINT [ "aws" ]
-
-CMD [ "--version" ]
