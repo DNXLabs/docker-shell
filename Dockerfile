@@ -24,6 +24,8 @@ RUN apk --no-cache update && \
         gettext-dev=0.20.1-r2 \
         wget=1.20.3-r0 \
         curl=7.67.0-r1 \
+        nodejs=12.15.0-r1 \
+        npm=12.15.0-r1 \
         g++=9.3.0-r0 \
         zip=3.0-r7 \
         git=2.24.3-r0  && \
