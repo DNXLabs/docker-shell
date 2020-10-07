@@ -1,4 +1,4 @@
-VERSION = 0.1.0
+VERSION = latest
 IMAGE_NAME ?= dnxsolutions/shell:$(VERSION)
 TAG = $(VERSION)
 
