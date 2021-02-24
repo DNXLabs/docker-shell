@@ -23,7 +23,6 @@ RUN apk --no-cache update && \
         make=4.2.1-r2 \
         jq=1.6-r0 \
         gettext-dev=0.20.1-r2 \
-        wget=1.20.3-r0 \
         curl=7.67.0-r3 \
         nodejs=12.21.0-r0 \
         npm=12.21.0-r0 \
@@ -34,8 +33,9 @@ RUN apk --no-cache update && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
 
-RUN wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -P /tmp && \
-    unzip /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin
+RUN curl -LO https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+    unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin && \
+    rm -rf terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
 RUN curl --silent --location -o /usr/local/bin/sops https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops-v${SOPS_VERSION}.linux && \
     chmod +x /usr/local/bin/sops
