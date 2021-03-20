@@ -28,7 +28,7 @@ RUN apk --no-cache update && \
         npm=12.21.0-r0 \
         g++=9.3.0-r0 \
         zip=3.0-r7 \
-        git=2.24.3-r0  && \
+        git=2.31.0-r0  && \
     pip3 --no-cache-dir install --upgrade pip==20.2.3 setuptools==46.1.3 dnxsso==0.5.0 awscli==1.18.154 && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
