@@ -26,7 +26,7 @@ RUN apk --no-cache update && \
         g++=10.2.1_pre1-r3 \
         zip=3.0-r9 \
         git=2.30.2-r0 \
-        py3-pip && \
+        py3-pip=20.3.4-r0 && \
     pip3 --no-cache-dir install --upgrade setuptools==54.2.0 dnxsso==0.5.0 awscli==1.19.44 && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
