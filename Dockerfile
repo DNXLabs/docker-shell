@@ -16,16 +16,16 @@ RUN apk --no-cache update && \
         ca-certificates=20191127-r5 \
         groff=1.22.4-r1 \
         less=563-r0 \
-        bash=5.1.4-r0 \
+        bash=5.1.0-r0 \
         make=4.3-r0 \
         jq=1.6-r1 \
-        gettext-dev=0.21-r0 \
-        curl=7.76.0-r0 \
+        gettext-dev=0.20.2-r2 \
+        curl=7.74.0-r1 \
         nodejs=14.16.0-r0 \
         npm=14.16.0-r0 \
-        g++=10.2.1_git20210328-r0 \
+        g++=10.2.1_pre1-r3 \
         zip=3.0-r9 \
-        git=2.31.1-r0 && \
+        git=2.30.2-r0 && \
     pip3 --no-cache-dir install --upgrade pip==21.0.1 setuptools==54.2.0 dnxsso==0.5.0 awscli==1.19.44 && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
