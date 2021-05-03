@@ -4,7 +4,7 @@ FROM alpine:3.13
 # ENV BOTO3_VERSION=1.14.2
 # ENV BOTOCORE_VERSION=v2.tar.gz
 # ENV AWSCLI_VERSION=2.0.37.tar.gz
-# ENV AWSCLI_VERSION=1.18.154
+ENV AWSCLI_VERSION=1.19.62
 ENV TERRAFORM_VERSION=0.14.5
 ENV SOPS_VERSION=3.6.1
 
@@ -27,7 +27,7 @@ RUN apk --no-cache update && \
         zip=3.0-r9 \
         git=2.30.2-r0 \
         py3-pip=20.3.4-r0 && \
-    pip3 --no-cache-dir install --upgrade setuptools==54.2.0 dnxsso==0.5.0 awscli==1.19.44 && \
+    pip3 --no-cache-dir install --upgrade setuptools==54.2.0 dnxsso==0.5.0 awscli==${AWSCLI_VERSION} && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
 
