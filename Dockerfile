@@ -20,9 +20,9 @@ RUN apk --no-cache update && \
         make=4.3-r0 \
         jq=1.6-r1 \
         gettext-dev=0.20.2-r2 \
-        curl=7.74.0-r1 \
-        nodejs=14.16.0-r0 \
-        npm=14.16.0-r0 \
+        curl=7.76.1-r0 \
+        nodejs=14.16.1-r1 \
+        npm=14.16.1-r1 \
         g++=10.2.1_pre1-r3 \
         zip=3.0-r9 \
         git=2.30.2-r0 \
