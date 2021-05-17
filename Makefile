@@ -1,6 +1,4 @@
-VERSION = latest
-IMAGE_NAME ?= dnxsolutions/shell:$(VERSION)
-TAG = $(VERSION)
+IMAGE_NAME ?= dnxsolutions/shell:latest
 
 build:
 	docker build -t $(IMAGE_NAME) .
@@ -8,8 +6,5 @@ build:
 shell:
 	docker run --rm -it --entrypoint=/bin/bash -v ~/.aws:/root/.aws -v $(PWD):/opt/app $(IMAGE_NAME)
 
-gitTag:
-	-git tag -d $(TAG)
-	-git push origin :refs/tags/$(TAG)
-	git tag $(TAG)
-	git push origin $(TAG)
+lint:
+	docker run --rm -i -v $(PWD)/hadolint.yaml:/.config/hadolint.yaml hadolint/hadolint < Dockerfile
